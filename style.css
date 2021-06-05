@@ -1,0 +1,143 @@
+/* .flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  color: white;
+  transform: rotateY(180deg);
+} */
+
+/* own made */
+
+/* .card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+}
+.inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-click .inner-card {
+  transform: rotateY(180deg);
+}
+.front-photo,
+.back-photo {
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.front-photo {
+  background-color: #bbb;
+}
+.back-photo {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+} */
+
+/* card 
+inner-card
+front-photo
+back-photo */
+.container {
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  position: absolute;
+  top: 30px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  position: relative;
+  margin-left: 10px;
+}
+.inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .back-photo {
+  transform: scale(1.1);
+  background-color: gray;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+.rerotate {
+  transform: rotateY(-180deg);
+}
+.front-photo,
+.back-photo {
+  box-shadow: 0px 0px 12px black;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.front-photo {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+.back-photo {
+  background-color: white;
+  transition: transform 0.6s;
+}
+.result {
+  bottom: 25px;
+  left: 25px;
+}
