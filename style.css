@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 /* .flip-card {
   background-color: transparent;
   width: 150px;
@@ -140,4 +142,33 @@ header {
 .result {
   bottom: 25px;
   left: 25px;
+}
+
+.game-over-msg-container {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.644);
+  height: 100vh;
+  width: 100vh;
+  text-align: center;
+}
+.game-over-msg {
+  height: 100vh;
+  width: 100%;
+}
+.game-over-msg h1 {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  color: red;
+  font-size: 75px;
+  font-weight: bold;
+  font-family: 'Shadows Into Light', cursive;
+}
+.play-again-btn {
+  position: absolute;
+  bottom: 150px;
+  right: 50%;
+  transform: translateX(50%);
 }
