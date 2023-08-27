@@ -163,6 +163,7 @@ for (let i = 0; i < cardTag.length; i++) {
       click = 1;
       flipCount = 20;
       matchCards = 0;
+      randomImgDiv();
       flipCountTag.innerHTML = flipCount;
     });
   });
