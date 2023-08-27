@@ -75,8 +75,22 @@ let matchCards = 0;
 let firstClick;
 let secondClick;
 
+
+
+//random the image div
+const randomImgDiv = () => {
+  for (let r = 0; r < imageTag.length; r++) {
+    let random = Math.floor(Math.random() * images.length - 1);
+    let randomImgs = images.splice(random, 1);
+    imageTag[r].src = randomImgs[0].src;
+    imageTag[r].classList.add(randomImgs[0].class);
+  }
+};
+randomImgDiv();
+
 // open the web first time
 const restartgame = () => {
+  randomImgDiv();
   for (let q = 0; q < imageTag.length; q++) {
     const imageTagq = imageTag[q];
     imageTagq.parentElement.parentElement.classList.add('rotate');
@@ -89,17 +103,6 @@ const restartgame = () => {
   }, 1500);
 };
 restartgame();
-
-//random the image div
-const randomImgDiv = () => {
-  for (let r = 0; r < imageTag.length; r++) {
-    let random = Math.floor(Math.random() * images.length - 1);
-    let randomImgs = images.splice(random, 1);
-    imageTag[r].src = randomImgs[0].src;
-    imageTag[r].classList.add(randomImgs[0].class);
-  }
-};
-randomImgDiv();
 // make image div
 for (let i = 0; i < cardTag.length; i++) {
   const innerCardTag = document.getElementsByClassName('inner-card')[i];
@@ -158,7 +161,6 @@ for (let i = 0; i < cardTag.length; i++) {
 
     // playagain button
     playAgainBut.addEventListener('click', () => {
-randomImgDiv();
       restartgame();
       document.querySelector('.game-over-msg-container').style.display = 'none';
       click = 1;
