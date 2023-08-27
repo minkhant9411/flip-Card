@@ -159,12 +159,12 @@ for (let i = 0; i < cardTag.length; i++) {
     // playagain button
     playAgainBut.addEventListener('click', () => {
       restartgame();
-      randomImgDiv();
       document.querySelector('.game-over-msg-container').style.display = 'none';
       click = 1;
       flipCount = 20;
       matchCards = 0;
       flipCountTag.innerHTML = flipCount;
+      location.reload();
     });
   });
 }
